@@ -8,6 +8,8 @@ file loaction is at: /.config/awesome/rc.lua. create one if the file does not ex
 
 Dependencies: dmenu, kitty(terminal), compton, nitrogen, volumeicon, nm-applet(network manager), pavucontrol (volumeicon has issue switching audio device after start), and dropbox.
 
+Installation: in rc.lua, you need you change the path of theme.lua to the file location. change this line: beautiful.init("/home/$USER_DIR$/.config/awesome/theme.lua")
+
 Issues and solutions when using the awesome window manager
 
 for nvidia driver casuing a black screen after log out (solved):
