@@ -49,7 +49,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/home/kevin/.config/awesome/theme.lua")
+beautiful.init("/home/supamafia/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
@@ -585,6 +585,9 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 
 --auto start
-awful.spawn.with_shell("compton")
-awful.spawn.with_shell("nitrogen --restore")
+awful.spawn.with_shell("nm-applet") --network
+awful.spawn.with_shell("volumeicon") --use pavucontrol
+awful.spawn.with_shell("compton") --transparency
+awful.spawn.with_shell("nitrogen --restore") --wallpaper
+awful.spawn.with_shell("/home/supamafia/.dropbox-dist/dropboxd") --dropbox
 
