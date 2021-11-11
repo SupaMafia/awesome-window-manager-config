@@ -2,11 +2,13 @@
 
 *Not finished* .config file for awesome window manager, will be updated
 
-file loaction: /.config/awesome/rc.lua  
+minimalistic window manager config
 
-if the file do not exit, create one.
+file loaction is at: /.config/awesome/rc.lua. create one if the file does not exist. 
 
-Dependencies: dmenu, kitty(terminal), compton, nitrogen, volumeicon, nm-applet(network manager), pavucontrol (volumeicon has issue switching audio device after start), and dropbox.   
+Dependencies: dmenu, kitty(terminal), compton, nitrogen, volumeicon, nm-applet(network manager), pavucontrol (volumeicon has issue switching audio device after start), and dropbox.
+
+Issues and solutions when using the awesome window manager
 
 for nvidia driver casuing a black screen after log out (solved):
 - solved by removeing sddm, and install lxdm
