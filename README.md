@@ -19,4 +19,5 @@ for nvidia driver casuing a black screen after log out (solved):
 for High DPI displays:
 - check your dpi by: xdpyinfo | grep -B 2 resolution
 - for nvidia: change the xrog.conf under /etx/X11/xrog.conf by adding "option DPI" under "screen" section. Sample included
+- if the file does not exit, create one by nvidia-xconfig
 - or change cursor size and dpi setting in /.Xresources. Sample included
