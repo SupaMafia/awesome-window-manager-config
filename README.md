@@ -8,7 +8,7 @@ Thus, this guide assumes that you have many of the applications already such as 
 
 The config file loaction is at: ~/.config/awesome/rc.lua. create one if the file does not exist. 
 
-Dependencies: rofi, dmenu, kitty(terminal), compton, nitrogen, pasystray, nm-applet(network manager), pavucontrol (volumeicon has issue switching audio device after start), and dropbox (optional). Then can be installed by: 
+Dependencies: rofi (run launcher), dmenu, kitty(terminal), compton, nitrogen, pasystray, nm-applet(network manager), pavucontrol (volumeicon has issue switching audio device after start), and dropbox (optional). Then can be installed by: 
 - sudo apt update
 - sudo apt full-upgrade
 - sudo apt install suckless-tools kitty compton compton-conf nitrogen pasystray pavucontrol rofi
