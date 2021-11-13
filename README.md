@@ -18,6 +18,9 @@ Installation: in rc.lua, you need you change the path of theme.lua to the file l
 
 Some potential issues and solutions while using the awesome window manager:
 
+no wallpaper:
+- nitrogen need to be launched for at least once before reloading awesome
+
 nvidia driver casuing a black screen after log out (solved):
 - solved by installing lxdm (other login manager could work as well)
 - when black screen occurs, go down to tty by ctrl+alt+f1 or ctrl+alt+f1 or ctrl+alt+f2 or +f3 or + f4, and go back to lxdm by ctrl+alt+f7.
