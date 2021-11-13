@@ -24,7 +24,7 @@ no wallpaper:
 
 nvidia driver casuing a black screen after log out (solved):
 - solved by installing lxdm (other login manager could work as well)
-- when black screen occurs, go down to tty by ctrl+alt+f1 or ctrl+alt+f1 or ctrl+alt+f2 or +f3 or + f4, and go back to lxdm by ctrl+alt+f7.
+- when black screen occurs, go down to tty by ctrl+alt+f1 or ctrl+alt+f2 or +f3 or + f4 .., and go back to lxdm by ctrl+alt+f7.
 
 for High DPI displays optimization:
 - check your dpi by: xdpyinfo | grep -B 2 resolution
