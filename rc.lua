@@ -52,8 +52,8 @@ end
 beautiful.init("/home/supamafia/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "x-terminal-emulator"
-editor = os.getenv("EDITOR") or "editor"
+terminal = "kitty" --EDITED
+editor = os.getenv("vim") or "vim" --EDITED
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -67,17 +67,17 @@ modkey = "Mod4"
 awful.layout.layouts = {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
-    awful.layout.suit.tile.left,
-    awful.layout.suit.tile.bottom,
-    awful.layout.suit.tile.top,
+    --awful.layout.suit.tile.left,
+    --awful.layout.suit.tile.bottom,
+    --awful.layout.suit.tile.top,
     awful.layout.suit.fair,
-    awful.layout.suit.fair.horizontal,
-    awful.layout.suit.spiral,
+    --awful.layout.suit.fair.horizontal,
+    --awful.layout.suit.spiral,
     awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.max,
-    awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier,
-    awful.layout.suit.corner.nw,
+    --awful.layout.suit.max,
+    --awful.layout.suit.max.fullscreen,
+    --awful.layout.suit.magnifier,
+    --awful.layout.suit.corner.nw,
     -- awful.layout.suit.corner.ne,
     -- awful.layout.suit.corner.sw,
     -- awful.layout.suit.corner.se,
@@ -330,7 +330,7 @@ globalkeys = gears.table.join(
 
     -- Prompt --EDIT
     awful.key({ modkey },            "r",     function () 
-    awful.util.spawn("dmenu_run") end,
+    awful.util.spawn("rofi -theme glue_pro_blue -show drun") end, --EDITED
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "x",
@@ -583,10 +583,9 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 
-
 --auto start
 awful.spawn.with_shell("nm-applet") --network
-awful.spawn.with_shell("volumeicon") --use pavucontrol
+awful.spawn.with_shell("pasystray") --use volume control
 awful.spawn.with_shell("compton") --transparency
 awful.spawn.with_shell("nitrogen --restore") --wallpaper
 awful.spawn.with_shell("/home/supamafia/.dropbox-dist/dropboxd") --dropbox
