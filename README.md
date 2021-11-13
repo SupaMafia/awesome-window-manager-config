@@ -7,10 +7,9 @@ It is only tested on lubuntu 20.04 LTS. Notice: use with caution.
 
 The config file loaction is at: ~/.config/awesome/rc.lua. create one if the file does not exist. 
 
-Dependencies: rofi, dmenu, kitty(terminal), compton, nitrogen, pasystray, nm-applet(network manager), pavucontrol (volumeicon has issue switching audio device after start), and dropbox (optional).
-- install by: 
+Dependencies: rofi, dmenu, kitty(terminal), compton, nitrogen, pasystray, nm-applet(network manager), pavucontrol (volumeicon has issue switching audio device after start), and dropbox (optional). Then can be installed by: 
 - sudo apt update
-- sudo apt upgrade
+- sudo apt full-upgrade
 - sudo apt install suckless-tools kitty compton compton-conf nitrogen pasystray pavucontrol rofi
 - sudo apt install network-manager network-manager-gnome network-manager-pptp
 - and the wm itself sudo apt install awesome
