@@ -588,5 +588,5 @@ awful.spawn.with_shell("nm-applet") --network
 awful.spawn.with_shell("pasystray") --use volume control
 awful.spawn.with_shell("compton") --transparency
 awful.spawn.with_shell("nitrogen --restore") --wallpaper
-awful.spawn.with_shell("/home/supamafia/.dropbox-dist/dropboxd") --dropbox
+-- awful.spawn.with_shell("/home/supamafia/.dropbox-dist/dropboxd") --dropbox (optional)
 
