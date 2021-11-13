@@ -6,7 +6,7 @@ minimalistic window manager config
 
 file loaction is at: /.config/awesome/rc.lua. create one if the file does not exist. 
 
-Dependencies: dmenu, kitty(terminal), compton, nitrogen, pasystray, nm-applet(network manager), pavucontrol (volumeicon has issue switching audio device after start), and dropbox (optional).
+Dependencies: rofi, dmenu, kitty(terminal), compton, nitrogen, pasystray, nm-applet(network manager), pavucontrol (volumeicon has issue switching audio device after start), and dropbox (optional).
 - install by: 
 - sudo apt update
 - sudo apt upgrade
