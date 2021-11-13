@@ -4,6 +4,7 @@
 
 A minimalistic window manager config. with only essential functions.
 It is only tested on lubuntu 20.04 LTS. Notice: use with caution.
+Thus, this guide assumes that you have many of the applications already for example xorg or a log in manager. 
 
 The config file loaction is at: ~/.config/awesome/rc.lua. create one if the file does not exist. 
 
