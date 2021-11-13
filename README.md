@@ -15,7 +15,7 @@ Dependencies: rofi (run launcher), dmenu, kitty(terminal), compton, nitrogen, pa
 - sudo apt install network-manager network-manager-gnome network-manager-pptp
 - and the wm itself sudo apt install awesome
 
-Installation: in rc.lua, you need you change the path of theme.lua to the file location. change this line: beautiful.init("/home/$USER_DIR$/.config/awesome/theme.lua")
+Installation: replace content of rc.lua and theme.lua. And in rc.lua, you need you change the path of theme.lua to the file location. change this line: beautiful.init("/home/$USER_DIR$/.config/awesome/theme.lua"), and theme.lua needs to be at this directory as well: ~/.config/awesome/. 
 
 Some potential issues and solutions while using the awesome window manager:
 
@@ -34,4 +34,5 @@ for High DPI displays optimization:
 
 theme your applications: 
 - use LXappearance (GTK) and qt5ct (qt)
-- you may need to check (ex. printenv QT_QPA_PLATFORMTHEME) or fix your environment variable 
+- you may need to check (ex. printenv QT_QPA_PLATFORMTHEME) or fix your environment variable
+- Adaita-dark applied in the picture 
