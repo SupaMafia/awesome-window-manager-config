@@ -51,7 +51,7 @@ Other programmes you may need in a window manager:
 - screengrab (screenshot)
 - okular (pdf)
 - vlc (videos)
-- fish (shell), set fish as default: chsh -s `which fish`
+- fish (shell), set fish as default: chsh -s `which fish`. or set it back to default bash shell: chsh -s (which bash)
 - conky (system monitor)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------
