@@ -49,7 +49,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/home/supamafia/.config/awesome/theme.lua")
+beautiful.init("/home/supamafia/.config/awesome/theme.lua")  --Change to your theme.lua dir. Awesome default is at: /usr/share/awesome/themes
 
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty" --EDITED
@@ -330,7 +330,7 @@ globalkeys = gears.table.join(
 
     -- Prompt --EDIT
     awful.key({ modkey },            "r",     function () 
-    awful.util.spawn("rofi -theme glue_pro_blue -show drun") end, --EDITED
+    awful.util.spawn("dmenu_run -nb '#2f1e47' -sb '#25583a' -nf '#ffffff' -fn 'terminus-18' -b") end, --EDITED "dmenu_run -nb '#2f1e47' -sb '#25583a' -nf '#ffffff' -fn 'terminus-18' -b" or  "rofi -theme glue_pro_blue -show drun"
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "x",
@@ -509,7 +509,7 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = FALSE } --EDIT
+      }, properties = { titlebars_enabled = FALSE }  --EDIT, remove title bar, DEFAULT=TRUE
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
@@ -586,7 +586,8 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 --auto start
 awful.spawn.with_shell("nm-applet") --network
 awful.spawn.with_shell("pasystray") --use volume control
+--awful.spawn.with_shell("volumeicon") --use volume control
 awful.spawn.with_shell("compton") --transparency
 awful.spawn.with_shell("nitrogen --restore") --wallpaper
--- awful.spawn.with_shell("/home/supamafia/.dropbox-dist/dropboxd") --dropbox (optional)
+--awful.spawn.with_shell("/home/supamafia/.dropbox-dist/dropboxd") --dropbox
 
