@@ -2,8 +2,8 @@
 
 .config file for awesome window manager.
 
-A minimalistic window manager config. with only essential functions.
-Notice: use with caution. It is only tested on lubuntu 20.04 LTS. And multiscreen stepup could be buggy. 
+A minimalistic window manager config. with sensible defaults and the some essential functions.
+Notice: use with caution. It is only tested on lubuntu 20.04 LTS. Could be buggy in a multiscreen setup. 
 This guide assumes that you have many of the applications already such as xorg, a login manager and etc. 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -17,14 +17,14 @@ Dependencies: rofi (run launcher), dmenu(run launcher), kitty(terminal), compton
 
 Installation: 
 - The config file loaction is at: ~/.config/awesome/rc.lua. create one if the file does not exist. 
-- Replace content of rc.lua and theme.lua. (Backup your old file first). And in rc.lua, you need to change the path of theme.lua to the file location. change this line: beautiful.init("/home/$USER_DIR$/.config/awesome/theme.lua")
-- And for the best practice, put theme.lua needs at the same directory with rc.lua: ~/.config/awesome/. 
+- Replace the content of rc.lua and theme.lua. (Backup your old files first). And in rc.lua, you need to change the path of theme.lua to the file location. change this line: beautiful.init("/home/$USER_DIR$/.config/awesome/theme.lua")
+- And for the best practice, put theme.lua at the same directory with rc.lua: ~/.config/awesome/. 
 
 Run launcher:
-- Default is dmenu, but you can change it to rofi by going to is line: awful.key({ modkey },            "r",     function ()
-- Change the code inside " " from dmenu_run -nb '#2f1e47' -sb '#25583a' -nf '#ffffff' -fn 'terminus-18' -b to: rofi -theme glue_pro_blue -show drun
+- The default is dmenu, but you can change it to rofi by going to is line: awful.key({ modkey },            "r",     function ()
+- Change the code inside " " from "dmenu_run -nb '#2f1e47' -sb '#25583a' -nf '#ffffff' -fn 'terminus-18' -b" to: "rofi -theme glue_pro_blue -show drun"
 - Just by using dmenu_run or rofi -show drun works as well. the provided script adds theming. 
-- If the text is too big change the font size here: 'terminus-18'
+- If the text is too big, change the font size by changing: 'terminus-18' to something like: 'terminus-10'
 
 Auto start:
 - Default uses pasystray, but you can switch to volumeicon by uncommenting the line (remove "--").
@@ -33,17 +33,15 @@ Title bars:
 - By default title bars are removed. To re-enable it, change this lines: properties = { titlebars_enabled = FALSE } from FALSE to TRUE.   
 
 Border size and panel gaps:
-- In theme.lua you can them to your own liking by altering these two parameters:
-- theme.menu_height = dpi(15)
-- theme.menu_width  = dpi(100)
+- In theme.lua you can change them to your own liking by altering these two parameters: theme.menu_height = dpi(15) and theme.menu_width  = dpi(100)
 
 Awesome theme color:
 - You can change it back to default gray color theme by using the value provided in the file.
 
 Theme your applications: 
-- use LXappearance (GTK) and qt5ct (qt)
-- you may need to change your environment variables (for example, checking your QT theme by: printenv QT_QPA_PLATFORMTHEME)
-- Adaita-dark theme is applied in the picture 
+- You can use LXappearance (GTK) and qt5ct (qt).
+- But you might be required to change your environment variables (for example, your can check your QT theme by: printenv QT_QPA_PLATFORMTHEME If the command returns qt5ct, the step is corret).
+- Adaita-dark theme is applied in the picture. 
 
 Other programmes you may need in a window manager:
 - kvantum (more themes)
