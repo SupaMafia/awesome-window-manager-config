@@ -3,19 +3,38 @@
 .config file for awesome window manager.
 
 A minimalistic window manager config. with only essential functions.
-It is only tested on lubuntu 20.04 LTS. Notice: use with caution.
-Thus, this guide assumes that you have many of the applications already such as xorg, a log in manager and etc. 
+Notice: use with caution. It is only tested on lubuntu 20.04 LTS. And multiscreen stepup could be buggy. 
+This guide assumes that you have many of the applications already such as xorg, a login manager and etc. 
 
-The config file loaction is at: ~/.config/awesome/rc.lua. create one if the file does not exist. 
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Dependencies: rofi (run launcher), dmenu, kitty(terminal), compton, nitrogen, pasystray, nm-applet(network manager), pavucontrol (volumeicon has issue switching audio device after start), and dropbox (optional). Then can be installed by: 
+Dependencies: rofi (run launcher), dmenu(run launcher), kitty(terminal), compton, nitrogen, pasystray, nm-applet(network manager), pavucontrol (volumeicon has issue switching audio device after start), and dropbox (optional). Then can be installed by: 
 - sudo apt update
 - sudo apt full-upgrade
 - sudo apt install suckless-tools kitty compton compton-conf nitrogen pasystray pavucontrol rofi
 - sudo apt install network-manager network-manager-gnome network-manager-pptp
-- and the wm itself sudo apt install awesome
+- and the wm itself: sudo apt install awesome
 
-Installation: replace content of rc.lua and theme.lua. And in rc.lua, you need to change the path of theme.lua to the file location. change this line: beautiful.init("/home/$USER_DIR$/.config/awesome/theme.lua"), and theme.lua needs to be at this directory as well: ~/.config/awesome/. 
+Installation: 
+- The config file loaction is at: ~/.config/awesome/rc.lua. create one if the file does not exist. 
+- Replace content of rc.lua and theme.lua. (Backup your old file first). And in rc.lua, you need to change the path of theme.lua to the file location. change this line: beautiful.init("/home/$USER_DIR$/.config/awesome/theme.lua")
+- And for the best practice, put theme.lua needs at the same directory with rc.lua: ~/.config/awesome/. 
+
+Theme your applications: 
+- use LXappearance (GTK) and qt5ct (qt)
+- you may need to change your environment variables (for example, checking your QT theme by: printenv QT_QPA_PLATFORMTHEME)
+- Adaita-dark applied in the picture 
+
+Other programmes you may need in a window manager:
+- kvantum (more themes)
+- xscreensaver (screen saver and lock screen)
+- gedit/kate/vim (text editor)
+- xterm (another popular terminal)
+- screengrab (screenshot)
+- okular (pdf)
+- vlc (videos)
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Some potential issues and solutions while using the awesome window manager:
 
@@ -31,11 +50,6 @@ for High DPI displays optimization:
 - for nvidia: change the xrog.conf under /etx/X11/xrog.conf by adding "option DPI" under "screen" section. Sample included
 - if the file does not exit, create one by nvidia-xconfig
 - or change cursor size and dpi setting in /.Xresources. Sample included
-
-theme your applications: 
-- use LXappearance (GTK) and qt5ct (qt)
-- you may need to check (ex. printenv QT_QPA_PLATFORMTHEME) or fix your environment variable
-- Adaita-dark applied in the picture 
-
+- 
 slow Rofi response
 - I don't know what is the reason. but dmenu works fine.
