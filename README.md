@@ -50,6 +50,7 @@ Other programmes you may need in a window manager:
 - screengrab (screenshot)
 - okular (pdf)
 - vlc (videos)
+- fish (shell)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
