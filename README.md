@@ -36,3 +36,6 @@ theme your applications:
 - use LXappearance (GTK) and qt5ct (qt)
 - you may need to check (ex. printenv QT_QPA_PLATFORMTHEME) or fix your environment variable
 - Adaita-dark applied in the picture 
+
+slow Rofi response
+- I don't know what is the reason. but dmenu works fine.
