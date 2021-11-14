@@ -52,6 +52,7 @@ Other programmes you may need in a window manager:
 - okular (pdf)
 - vlc (videos)
 - fish (shell)
+- conky (system monitor)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
