@@ -2,9 +2,9 @@
 
 .config file for awesome window manager.
 
-A minimalistic window manager config. with sensible defaults and the some essential functions.
+A minimalistic window manager config. with sensible defaults and some essential functions.
 Notice: use with caution. It is only tested on lubuntu 20.04 LTS. Could be buggy in a multiscreen setup. 
-This guide assumes that you have many of the applications already such as xorg, a login manager and etc. 
+This guide assumes that you have many of the applications already such as xorg, a login manager, etc. 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -16,27 +16,27 @@ Dependencies: rofi (run launcher), dmenu(run launcher), kitty(terminal), compton
 - and the wm itself: sudo apt install awesome
 
 Installation: 
-- The config file loaction is at: ~/.config/awesome/rc.lua. create one if the file does not exist. 
-- Replace the content of rc.lua and theme.lua. (Backup your old files first). And in rc.lua, you need to change the path of theme.lua to the file location. change this line: beautiful.init("/home/$USER_DIR$/.config/awesome/theme.lua")
+- The config file location is at: ~/.config/awesome/rc.lua. create one if the file does not exist. 
+- Replace the content of rc.lua and theme.lua. (Back up your old files first). And in rc.lua, you need to change the path of theme.lua to the file location. change this line: beautiful.init("/home/$USER_DIR$/.config/awesome/theme.lua")
 - And for the best practice, put theme.lua at the same directory with rc.lua: ~/.config/awesome/. 
 
 Run launcher:
-- The default is dmenu, but you can change it to rofi by going to is line: awful.key({ modkey },            "r",     function ()
+- The default is dmenu, but you can change it to rofi by going to this line: awful.key({ modkey },            "r",     function ()
 - Change the code inside " " from "dmenu_run -nb '#2f1e47' -sb '#25583a' -nf '#ffffff' -fn 'terminus-18' -b" to: "rofi -theme glue_pro_blue -show drun"
 - Just by using dmenu_run or rofi -show drun works as well. the provided script adds theming. 
 - If the text is too big, change the font size by changing: 'terminus-18' to something like: 'terminus-10'
 
-Auto start:
+Autostart:
 - Default uses pasystray, but you can switch to volumeicon by uncommenting the line (remove "--").
 
 Title bars:
 - By default title bars are removed. To re-enable it, change this lines: properties = { titlebars_enabled = FALSE } from FALSE to TRUE.   
 
 Border size and panel gaps:
-- In theme.lua you can change them to your own liking by altering these two parameters: theme.menu_height = dpi(15) and theme.menu_width  = dpi(100)
+- In theme.lua you can change them to your liking by altering these two parameters: theme.menu_height = dpi(15) and theme.menu_width  = dpi(100)
 
-Awesome theme color:
-- You can change it back to default gray color theme by using the value provided in the file.
+Awesome theme colour:
+- You can change it back to the default grey colour theme by using the value provided in the file.
 
 Theme your applications: 
 - You can use LXappearance (GTK) and qt5ct (qt).
@@ -59,12 +59,12 @@ Other programmes you may need in a window manager:
 Some potential issues and solutions while using the awesome window manager:
 
 no wallpaper:
-- nitrogen need to be launched for at least once before reloading awesome
+- nitrogen need to be launched at least once before reloading awesome
 
-nvidia driver casuing a black screen after logging out (solved):
-- solved by installing lxdm (other login manager could work as well)
+Nvidia driver causing a black screen after logging out (solved):
+- solved by installing lxdm (another login manager could work as well)
 - when black screen occurs, go down to tty by ctrl+alt+f1 or ctrl+alt+f2 or +f3 or + f4 .., and go back to lxdm by ctrl+alt+f7.
-- Not the most elegent solution.
+- Not the most elegant solution.
 
 High DPI displays optimization:
 - There are two places you can change it. First, .Xresources. Second, xorg.conf.
