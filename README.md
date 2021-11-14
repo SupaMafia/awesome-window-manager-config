@@ -1,4 +1,4 @@
-# awsomewm.config
+# awesomewm_config
 
 .config file for awesome window manager.
 
