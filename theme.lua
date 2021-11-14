@@ -1,5 +1,5 @@
 ---------------------------
--- Default awesome theme --
+-- Modified default awesome theme --
 ---------------------------
 
 local theme_assets = require("beautiful.theme_assets")
@@ -11,10 +11,10 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font          = "sans 8"
+theme.font          = "Ubuntu 9" --EDITED:DEFAULT="sans 8"
 
 theme.bg_normal     = "#222222"
-theme.bg_focus      = "#535d6c"
+theme.bg_focus      = "#472d6b" --EDITED:DEFAULT="#535d6c"
 theme.bg_urgent     = "#ff0000"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
@@ -44,7 +44,7 @@ theme.border_marked = "#91231c"
 --theme.taglist_bg_focus = "#ff0000"
 
 -- Generate taglist squares:
-local taglist_square_size = dpi(4)
+local taglist_square_size = dpi(4) --EDITED DEFAULT=4
 theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
     taglist_square_size, theme.fg_normal
 )
@@ -62,7 +62,7 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
-theme.menu_height = dpi(15)
+theme.menu_height = dpi(15)  --defult = 15
 theme.menu_width  = dpi(100)
 
 -- You can add as many variables as
