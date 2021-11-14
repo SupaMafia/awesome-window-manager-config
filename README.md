@@ -20,10 +20,27 @@ Installation:
 - Replace content of rc.lua and theme.lua. (Backup your old file first). And in rc.lua, you need to change the path of theme.lua to the file location. change this line: beautiful.init("/home/$USER_DIR$/.config/awesome/theme.lua")
 - And for the best practice, put theme.lua needs at the same directory with rc.lua: ~/.config/awesome/. 
 
+Run launcher:
+- Default is dmenu, but you can change it to rofi by going to is line: awful.key({ modkey },            "r",     function ()
+- Change the code inside " " from dmenu_run -nb '#2f1e47' -sb '#25583a' -nf '#ffffff' -fn 'terminus-18' -b to: rofi -theme glue_pro_blue -show drun
+- Just by using dmenu_run or rofi -show drun works as well. the provided script adds theming. 
+- If the text is too big change the font size here: 'terminus-18'
+
+Auto start:
+- Default uses pasystray, but you can switch to volumeicon by uncommenting the line (remove "--").
+
+Title bars:
+- By default title bars are removed. To re-enable it, change this lines: properties = { titlebars_enabled = FALSE } from FALSE to TRUE.   
+
+Border size and panel gaps:
+- In theme.lua you can them to your own liking by altering these two parameters:
+- theme.menu_height = dpi(15)
+- theme.menu_width  = dpi(100)
+
 Theme your applications: 
 - use LXappearance (GTK) and qt5ct (qt)
 - you may need to change your environment variables (for example, checking your QT theme by: printenv QT_QPA_PLATFORMTHEME)
-- Adaita-dark applied in the picture 
+- Adaita-dark theme is applied in the picture 
 
 Other programmes you may need in a window manager:
 - kvantum (more themes)
@@ -41,15 +58,18 @@ Some potential issues and solutions while using the awesome window manager:
 no wallpaper:
 - nitrogen need to be launched for at least once before reloading awesome
 
-nvidia driver casuing a black screen after log out (solved):
+nvidia driver casuing a black screen after logging out (solved):
 - solved by installing lxdm (other login manager could work as well)
 - when black screen occurs, go down to tty by ctrl+alt+f1 or ctrl+alt+f2 or +f3 or + f4 .., and go back to lxdm by ctrl+alt+f7.
+- Not the most elegent solution.
 
-for High DPI displays optimization:
+High DPI displays optimization:
+- There are two places you can change it. First, .Xresources. Second, xorg.conf.
 - check your dpi by: xdpyinfo | grep -B 2 resolution
-- for nvidia: change the xrog.conf under /etx/X11/xrog.conf by adding "option DPI" under "screen" section. Sample included
-- if the file does not exit, create one by nvidia-xconfig
-- or change cursor size and dpi setting in /.Xresources. Sample included
-- 
-slow Rofi response
+- For nvidia user: change the xrog.conf under /etx/X11/xrog.conf by adding "option DPI" under "screen" section. Sample included. If the file does not exit, create one by: nvidia-xconfig
+- Change the cursor size and dpi setting in /.Xresources. Sample included
+ 
+Slow Rofi response
 - I don't know what is the reason. but dmenu works fine.
+
+Dropbox logo bug: white border around the logo
