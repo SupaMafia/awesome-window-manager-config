@@ -37,6 +37,9 @@ Border size and panel gaps:
 - theme.menu_height = dpi(15)
 - theme.menu_width  = dpi(100)
 
+Awesome theme color:
+- You can change it back to default gray color theme by using the value provided in the file.
+
 Theme your applications: 
 - use LXappearance (GTK) and qt5ct (qt)
 - you may need to change your environment variables (for example, checking your QT theme by: printenv QT_QPA_PLATFORMTHEME)
