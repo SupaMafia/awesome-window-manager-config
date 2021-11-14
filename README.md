@@ -24,7 +24,7 @@ Run launcher:
 - The default is dmenu, but you can change it to rofi by going to this line: awful.key({ modkey },            "r",     function ()
 - Change the code inside " " from "dmenu_run -nb '#2f1e47' -sb '#25583a' -nf '#ffffff' -fn 'terminus-18' -b" to: "rofi -theme glue_pro_blue -show drun"
 - Just by using dmenu_run or rofi -show drun works as well. the provided script adds theming. 
-- If the text is too big, change the font size by changing: 'terminus-18' to something like: 'terminus-10'
+- If the font is too big, change the size by changing: 'terminus-18' to something like: 'terminus-10'
 
 Autostart:
 - Default uses pasystray, but you can switch to volumeicon by uncommenting the line (remove "--").
