@@ -3,12 +3,14 @@
 .config file for awesome window manager.
 
 A minimalistic window manager config. with sensible defaults and some essential functions.
-Notice: use with caution. It is only tested on lubuntu 20.04 LTS. Could be buggy in a multiscreen setup. 
+Notice: use with caution. It is only tested on lubuntu 20.04 LTS. 
+Could be buggy in a multiscreen setup can be buggy, but xrandr helped. 
 This guide assumes that you have many of the applications already such as xorg, a login manager, etc. 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Dependencies: rofi (run launcher), dmenu(run launcher), kitty(terminal), compton, nitrogen, pasystray, nm-applet(network manager), pavucontrol (volumeicon has issue switching audio device after start), and dropbox (optional). Then can be installed by: 
+Dependencies: 
+rofi (run launcher), dmenu(run launcher), kitty(terminal), compton, nitrogen, pasystray, nm-applet(network manager), pavucontrol (volumeicon has issue switching audio device after start), lxqt-powermanagement, and dropbox (optional). Then can be installed by: 
 - sudo apt update
 - sudo apt full-upgrade
 - sudo apt install suckless-tools kitty compton compton-conf nitrogen pasystray pavucontrol rofi
