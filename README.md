@@ -44,7 +44,7 @@ Screensaver
 - Use xscreensaver. You can configure it by xscreensaver-demo
 
 Powermanagemwnt
-- Use lxpowermanagement
+- Use lxqt-powermanagement
 
 Theme your applications: 
 - You can use LXappearance (GTK) and qt5ct (qt).
