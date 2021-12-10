@@ -4,7 +4,7 @@
 
 A minimalistic window manager config. with sensible defaults and some essential functions.
 Notice: use with caution. It is only tested on lubuntu 20.04 LTS. 
-Could be buggy in a multiscreen setup can be buggy, but xrandr helped. 
+Could be buggy in a multiscreen setup can be buggy, but arandr helped. 
 This guide assumes that you have many of the applications already such as xorg, a login manager, etc. 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------
