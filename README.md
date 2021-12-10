@@ -10,10 +10,10 @@ This guide assumes that you have many of the applications already such as xorg, 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Dependencies: 
-rofi (run launcher), dmenu(run launcher), kitty(terminal), compton, nitrogen, pasystray, nm-applet(network manager), pavucontrol (volumeicon has issue switching audio device after start), lxqt-powermanagement, and dropbox (optional). Then can be installed by: 
+rofi (run launcher), dmenu(run launcher), kitty(terminal), compton, nitrogen, pasystray, nm-applet(network manager), pavucontrol (volumeicon has issue switching audio device after start), lxqt-powermanagement, xscreensaver, and dropbox (optional). Then can be installed by: 
 - sudo apt update
 - sudo apt full-upgrade
-- sudo apt install suckless-tools kitty compton compton-conf nitrogen pasystray pavucontrol rofi
+- sudo apt install suckless-tools kitty compton compton-conf nitrogen pasystray pavucontrol rofi xscreensaver arandr
 - sudo apt install network-manager network-manager-gnome network-manager-pptp
 - and the wm itself: sudo apt install awesome
 
@@ -39,6 +39,12 @@ Border size and panel gaps:
 
 Awesome theme colour:
 - You can change it back to the default grey colour theme by using the value provided in the file.
+
+Screensaver
+- Use xscreensaver. You can configure it by xscreensaver-demo
+
+Powermanagemwnt
+- Use lxpowermanagement
 
 Theme your applications: 
 - You can use LXappearance (GTK) and qt5ct (qt).
