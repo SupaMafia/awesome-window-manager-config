@@ -22,6 +22,10 @@ Installation:
 - Replace the content of rc.lua and theme.lua. (Back up your old files first). And in rc.lua, you need to change the path of theme.lua to the file location. change this line: beautiful.init("/home/$USER_DIR$/.config/awesome/theme.lua")
 - And for the best practice, put theme.lua at the same directory with rc.lua: ~/.config/awesome/. 
 
+Terminal:
+- Change to your perferred terminal here: terminal = "qterminal" --EDITED and here:     awful.key({ modkey,           }, "Return", function () awful.spawn.with_shell("qterminal") end,
+              {description = "open a terminal", group = "launcher"}),
+
 Run launcher:
 - The default is dmenu, but you can change it to rofi by going to this line: awful.key({ modkey },            "r",     function ()
 - Change the code inside " " from "dmenu_run -nb '#2f1e47' -sb '#25583a' -nf '#ffffff' -fn 'terminus-18' -b" to: "rofi -theme glue_pro_blue -show drun"
