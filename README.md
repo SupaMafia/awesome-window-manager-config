@@ -82,7 +82,7 @@ High DPI displays optimization:
 - There are two places you can change it. First, .Xresources. Second, xorg.conf.
 - check your dpi by: xdpyinfo | grep -B 2 resolution
 - For nvidia user: change the xrog.conf under /etx/X11/xrog.conf by adding "option DPI" under "screen" section. Sample included. If the file does not exit, create one by: nvidia-xconfig
-- Change the cursor size and dpi setting in /.Xresources. Sample included
+- Change the cursor size and dpi setting in /.Xresources. Sample included: dpi=130 for 4k 
  
 Slow Rofi response
 - I don't know what is the reason. but dmenu works fine.
