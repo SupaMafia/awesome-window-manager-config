@@ -65,6 +65,7 @@ Other programmes you may need in a window manager:
 - vlc (videos)
 - fish (shell), set fish as default: chsh -s `which fish`. or set it back to default bash shell: chsh -s (which bash)
 - conky (system monitor)
+- Papirus icon set (sudo add-apt-repository ppa:papirus/papirus) 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
