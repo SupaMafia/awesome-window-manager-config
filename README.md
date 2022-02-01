@@ -89,3 +89,7 @@ Slow Rofi response
 - I don't know what is the reason. but dmenu works fine.
 
 Dropbox logo bug: white border around the logo
+
+Use dmenu to run flatpak apps
+- Use ln
+- ex: sudo ln -s /var/lib/flatpak/exports/bin/fi.skyjake.Lagrange /usr/bin/Lagrange
