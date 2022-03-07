@@ -77,6 +77,7 @@ no wallpaper:
 Nvidia driver causing a black screen after logging out (solved):
 - solved by installing lxdm (another login manager could work as well)
 - when black screen occurs, go down to tty by ctrl+alt+f1 or ctrl+alt+f2 or +f3 or + f4 .., and go back to lxdm by ctrl+alt+f7.
+- In the case function key does not work use command: "sudo chvt N"
 - Not the most elegant solution.
 
 High DPI displays optimization:
