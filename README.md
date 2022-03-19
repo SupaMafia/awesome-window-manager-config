@@ -50,6 +50,10 @@ Screensaver
 Powermanagemwnt
 - Use lxqt-powermanagement
 
+TextClock
+- now use seconds: ("%a %b %d, v.%V, %Z %T", 1) (1 is the interval of updating)
+- guide to other formatting options: https://www.howtogeek.com/410442/how-to-display-the-date-and-time-in-the-linux-terminal-and-use-it-in-bash-scripts/ 
+
 Theme your applications: 
 - You can use LXappearance (GTK) and qt5ct (qt).
 - But you might be required to change your environment variables (for example, your can check your QT theme by: printenv QT_QPA_PLATFORMTHEME If the command returns qt5ct, the step is corret).
