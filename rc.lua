@@ -67,14 +67,14 @@ modkey = "Mod4"
 awful.layout.layouts = {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
-    --awful.layout.suit.tile.left,
-    --awful.layout.suit.tile.bottom,
-    --awful.layout.suit.tile.top,
+    awful.layout.suit.tile.left,
+    awful.layout.suit.tile.bottom,
+    awful.layout.suit.tile.top,
     awful.layout.suit.fair,
-    --awful.layout.suit.fair.horizontal,
-    --awful.layout.suit.spiral,
+    awful.layout.suit.fair.horizontal,
+    awful.layout.suit.spiral,
     awful.layout.suit.spiral.dwindle,
-    --awful.layout.suit.max,
+   --awful.layout.suit.max,
     --awful.layout.suit.max.fullscreen,
     --awful.layout.suit.magnifier,
     --awful.layout.suit.corner.nw,
@@ -125,7 +125,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+mytextclock = wibox.widget.textclock("| %a %b %d | v.%V | %T |" ,  1)  --EDITED 
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -292,7 +292,7 @@ globalkeys = gears.table.join(
         {description = "go back", group = "client"}),
 
     -- Standard program
-    awful.key({ modkey,           }, "Return", function () awful.spawn.with_shell("qterminal") end,
+    awful.key({ modkey,           }, "Return", function () awful.spawn.with_shell("kitty") end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
@@ -300,7 +300,7 @@ globalkeys = gears.table.join(
               {description = "quit awesome", group = "awesome"}),
 
     -- EDITED add new keybinds
-    awful.key({ modkey,"Shift"}, "l", function()awful.spawn.with_shell("xscreensaver-command -lock")end,
+    awful.key({ modkey,"Shift"}, "x", function()awful.spawn.with_shell("xscreensaver-command -lock")end,
               {description = "lock screen", group ="awesome"}),
     
     
@@ -597,4 +597,3 @@ awful.spawn.with_shell("compton") --transparency
 awful.spawn.with_shell("nitrogen --restore") --wallpaper
 awful.spawn.with_shell("/home/supamafia/.dropbox-dist/dropboxd") --dropbox
 awful.spawn.with_shell("lxqt-powermanagement") --battery monitor
-
