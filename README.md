@@ -11,7 +11,7 @@ This guide assumes that you have many of the applications already such as xorg, 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Dependencies: 
+**Dependencies:** 
 rofi (run launcher), dmenu(run launcher), kitty(terminal), compton, nitrogen, pasystray, nm-applet(network manager), pavucontrol (volumeicon has issue switching audio device after start), lxqt-powermanagement, xscreensaver, and dropbox (optional). Then can be installed by: 
 - sudo apt update
 - sudo apt full-upgrade
@@ -19,49 +19,49 @@ rofi (run launcher), dmenu(run launcher), kitty(terminal), compton, nitrogen, pa
 - sudo apt install network-manager network-manager-gnome network-manager-pptp
 - and the wm itself: sudo apt install awesome
 
-Installation: 
+**Installation:**
 - The config file location is at: ~/.config/awesome/rc.lua. create one if the file does not exist. 
 - Replace the content of rc.lua and theme.lua. (Back up your old files first). And in rc.lua, you need to change the path of theme.lua to the file location. change this line: beautiful.init("/home/$USER_DIR$/.config/awesome/theme.lua")
 - And for the best practice, put theme.lua at the same directory with rc.lua: ~/.config/awesome/. 
 
-Terminal:
+**Terminal:**
 - Change to your perferred terminal here: terminal = "qterminal" --EDITED and here:     awful.key({ modkey,           }, "Return", function () awful.spawn.with_shell("qterminal") end,
               {description = "open a terminal", group = "launcher"}),
 
-Run launcher:
+**Run launcher:**
 - The default is dmenu, but you can change it to rofi by going to this line: awful.key({ modkey },            "r",     function ()
 - Change the code inside " " from "dmenu_run -nb '#2f1e47' -sb '#25583a' -nf '#ffffff' -fn 'terminus-18' -b" to: "rofi -theme glue_pro_blue -show drun"
 - Just by using dmenu_run or rofi -show drun works as well. the provided script adds theming. 
 - If the font is too big, change the size by changing: 'terminus-18' to something like: 'terminus-10'
 
-Autostart:
+**Autostart:**
 - Default uses pasystray, but you can switch to volumeicon by uncommenting the line (remove "--").
 
-Title bars:
+**Title bars:**
 - By default title bars are removed. To re-enable it, change this lines: properties = { titlebars_enabled = FALSE } from FALSE to TRUE.   
 
-Border size and panel gaps:
+**Border size and panel gaps:**
 - In theme.lua you can change them to your liking by altering these two parameters: theme.menu_height = dpi(15) and theme.menu_width  = dpi(100)
 
-Awesome theme colour:
+**Awesome theme colour:**
 - You can change it back to the default grey colour theme by using the value provided in the file.
 
-Screensaver
+**Screensaver**
 - Use xscreensaver. You can configure it by xscreensaver-demo
 
-Powermanagemwnt
+**Powermanagemwnt**
 - Use lxqt-powermanagement
 
-TextClock
+**TextClock**
 - now use seconds: ("%a %b %d, v.%V, %Z %T", 1) (1 is the interval of updating)
 - guide to other formatting options: https://www.howtogeek.com/410442/how-to-display-the-date-and-time-in-the-linux-terminal-and-use-it-in-bash-scripts/ 
 
-Theme your applications: 
+**Theme your applications:** 
 - You can use LXappearance (GTK) and qt5ct (qt).
 - But you might be required to change your environment variables (for example, your can check your QT theme by: printenv QT_QPA_PLATFORMTHEME If the command returns qt5ct, the step is corret).
 - Adaita-dark theme is applied in the picture. 
 
-Other programmes you may need in a window manager:
+**Other programmes you may need in a window manager:**
 - kvantum (more themes)
 - xscreensaver (screen saver and lock screen)
 - gedit/kate/vim (text editor)
@@ -78,26 +78,28 @@ Other programmes you may need in a window manager:
 
 Some potential issues and solutions while using the awesome window manager:
 
-no wallpaper:
+**no wallpaper:**
 - nitrogen need to be launched at least once before reloading awesome
 
+**NVIDIA**
 Nvidia driver causing a black screen after logging out (solved):
 - solved by installing lxdm (another login manager could work as well)
 - when black screen occurs, go down to tty by ctrl+alt+f1 or ctrl+alt+f2 or +f3 or + f4 .., and go back to lxdm by ctrl+alt+f7.
 - In the case function key does not work use command: "sudo chvt N"
 - Not the most elegant solution.
 
-High DPI displays optimization:
+**High DPI displays optimization:**
 - There are two places you can change it. First, .Xresources. Second, xorg.conf.
 - check your dpi by: xdpyinfo | grep -B 2 resolution
 - For nvidia user: change the xrog.conf under /etx/X11/xrog.conf by adding "option DPI" under "screen" section. Sample included. If the file does not exit, create one by: nvidia-xconfig
 - Change the cursor size and dpi setting in /.Xresources. Sample included: dpi=130 for 4k, dpi=100 for 2k
  
-Slow Rofi response
+**Slow Rofi response**
 - I don't know what is the reason. but dmenu works fine.
 
-Dropbox logo bug: white border around the logo
+**Dropbox logo** 
+- bug: white border around the logo
 
-Use dmenu to run flatpak apps
+**Use dmenu to run flatpak apps**
 - Use ln
 - ex: sudo ln -s /var/lib/flatpak/exports/bin/fi.skyjake.Lagrange /usr/bin/Lagrange
