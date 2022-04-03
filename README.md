@@ -1,5 +1,7 @@
 # awesomewm_config
 
+**Soon, this project will move to Qtile** 
+
 .config file for awesome window manager.
 
 A minimalistic window manager config. with sensible defaults and some essential functions.
