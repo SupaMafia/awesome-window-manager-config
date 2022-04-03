@@ -1,13 +1,12 @@
 # awesomewm_config
 
-**Soon, this project will move to Qtile** 
-
 .config file for awesome window manager.
 
 A minimalistic window manager config. with sensible defaults and some essential functions.
 Notice: use with caution. It is only tested on lubuntu 20.04 LTS. 
 Could be buggy in a multiscreen setup, but arandr helped. 
 This guide assumes that you have many of the applications already such as xorg, a login manager, etc. 
+Soon, this project will move to Qtile. It is due to the increasing adoption of wayland. 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -82,7 +81,7 @@ Some potential issues and solutions while using the awesome window manager:
 - nitrogen need to be launched at least once before reloading awesome
 
 **NVIDIA**
-Nvidia driver causing a black screen after logging out (solved):
+- Nvidia driver causing a black screen after logging out (solved):
 - solved by installing lxdm (another login manager could work as well)
 - when black screen occurs, go down to tty by ctrl+alt+f1 or ctrl+alt+f2 or +f3 or + f4 .., and go back to lxdm by ctrl+alt+f7.
 - In the case function key does not work use command: "sudo chvt N"
