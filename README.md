@@ -60,6 +60,11 @@ rofi (run launcher), dmenu(run launcher), kitty(terminal), compton, nitrogen, pa
 - But you might be required to change your environment variables (for example, your can check your QT theme by: printenv QT_QPA_PLATFORMTHEME If the command returns qt5ct, the step is corret).
 - Adaita-dark theme is applied in the picture. 
 
+**HP printer**
+- need dependency: hplip
+- setup the printer through: sudo hp-setup -i
+- GUI scan tool: simple-scan
+
 **Other programmes you may need in a window manager:**
 - kvantum (more themes)
 - xscreensaver (screen saver and lock screen)
