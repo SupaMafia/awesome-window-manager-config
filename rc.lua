@@ -52,7 +52,7 @@ end
 beautiful.init("/home/supamafia/.config/awesome/theme.lua")  --Change to your theme.lua dir. Awesome default is at: /usr/share/awesome/themes
 
 -- This is used later as the default terminal and editor to run.
-terminal = "qterminal" --EDITED
+terminal = "kitty" --EDITED
 editor = os.getenv("vim") or "vim" --EDITED
 editor_cmd = terminal .. " -e " .. editor
 
@@ -67,14 +67,14 @@ modkey = "Mod4"
 awful.layout.layouts = {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
-    awful.layout.suit.tile.left,
-    awful.layout.suit.tile.bottom,
-    awful.layout.suit.tile.top,
+    --awful.layout.suit.tile.left,
+    --awful.layout.suit.tile.bottom,
+    --awful.layout.suit.tile.top,
     awful.layout.suit.fair,
-    awful.layout.suit.fair.horizontal,
-    awful.layout.suit.spiral,
+    --awful.layout.suit.fair.horizontal,
+    --awful.layout.suit.spiral,
     awful.layout.suit.spiral.dwindle,
-   --awful.layout.suit.max,
+    --awful.layout.suit.max,
     --awful.layout.suit.max.fullscreen,
     --awful.layout.suit.magnifier,
     --awful.layout.suit.corner.nw,
@@ -125,7 +125,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock("| %a %b %d | v.%V | %T |" ,  1)  --EDITED 
+mytextclock = wibox.widget.textclock("|| %a %b %d | v.%V | %T ||" ,  1)  --EDITED 
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -299,10 +299,10 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
 
-    -- EDITED add new keybinds
-    awful.key({ modkey,"Shift"}, "x", function()awful.spawn.with_shell("xscreensaver-command -lock")end,
-              {description = "lock screen", group ="awesome"}),
     
+    -- EDITED add new keybinds
+    awful.key({ modkey,"Shift"}, "x", function()awful.spawn.with_shell("xscreensaver-command -lock") end,
+              {description = "lock screen", group ="awesome"}),
     
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
@@ -335,7 +335,7 @@ globalkeys = gears.table.join(
 
     -- Prompt --EDIT
     awful.key({ modkey },            "r",     function () 
-    awful.util.spawn("dmenu_run -nb '#2f1e47' -sb '#25583a' -nf '#ffffff' -fn 'terminus-14' -b") end, --EDITED "dmenu_run -nb '#2f1e47' -sb '#25583a' -nf '#ffffff' -fn 'terminus-18' -b" or  "rofi -theme glue_pro_blue -show drun"
+    awful.util.spawn("dmenu_run -nb '#6667AB' -sb '#66ab87' -nf '#ffffff' -fn 'Ubuntu-22' -b") end, --EDITED "dmenu_run -nb '#2f1e47' -sb '#25583a' -nf '#ffffff' -fn 'terminus-18' -b" or  "rofi -theme glue_pro_blue -show drun"
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "x",
@@ -591,9 +591,9 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 --auto start
 awful.spawn.with_shell("xscreensaver") --lockscreen
 awful.spawn.with_shell("nm-applet") --network
-awful.spawn.with_shell("pasystray") --use volume control
---awful.spawn.with_shell("volumeicon") --use volume control
+--awful.spawn.with_shell("pasystray") --use volume control
+awful.spawn.with_shell("volumeicon") --use volume control
 awful.spawn.with_shell("compton") --transparency
 awful.spawn.with_shell("nitrogen --restore") --wallpaper
 awful.spawn.with_shell("/home/supamafia/.dropbox-dist/dropboxd") --dropbox
-awful.spawn.with_shell("lxqt-powermanagement") --battery monitor
+
