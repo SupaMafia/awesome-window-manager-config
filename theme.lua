@@ -14,7 +14,7 @@ local theme = {}
 theme.font          = "Ubuntu 9" --EDITED:DEFAULT="sans 8"
 
 theme.bg_normal     = "#222222"
-theme.bg_focus      = "#472d6b" --EDITED:DEFAULT="#535d6c"
+theme.bg_focus      = "#6667AB" --EDITED:DEFAULT="#535d6c"
 theme.bg_urgent     = "#ff0000"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
@@ -24,11 +24,26 @@ theme.fg_focus      = "#ffffff"
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
-theme.useless_gap   = dpi(9)
+theme.useless_gap   = dpi(6)
 theme.border_width  = dpi(2)
 theme.border_normal = "#000000"
-theme.border_focus  = "#dea7fb" --EDITED:DEFAULT="#535d6c"
+theme.border_focus  = "#66ab87" --EDITED:DEFAULT="#535d6c"
 theme.border_marked = "#91231c"
+
+-- wibar
+-- theme.wibar_stretch = TRUE
+--theme.wibar_border_width = dpi(3)
+-- theme.wibar\_border\_color = nil
+-- theme.wibar\_ontop = nil
+-- theme.wibar\_cursor = nil
+-- theme.wibar_opacity = 1 
+--theme.wibar_type =  "normal"
+--theme.wibar_width =  dpi(22)
+--theme.wibar_height = dpi(22)
+-- theme.wibar\_bg = nil
+-- theme.wibar\_bgimage = nil
+-- theme.wibar\_fg = nil
+-- theme.wibar\_shape = nil
 
 -- There are other variable sets
 -- overriding the default one when
