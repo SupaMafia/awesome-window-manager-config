@@ -6,7 +6,7 @@ A minimalistic window manager config. with sensible defaults and some essential 
 Notice: use with caution. It is only tested on lubuntu 20.04 LTS. 
 Could be buggy in a multiscreen setup, but arandr helped. 
 This guide assumes that you have many of the applications already such as xorg, a login manager, etc. 
-Soon, this project will move to Qtile. It is due to the increasing adoption of wayland. 
+Note: No new features will be added to this config. This project has move to Qtile, due to the increasing adoption of wayland. 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
